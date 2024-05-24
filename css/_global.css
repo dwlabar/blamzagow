@@ -1,9 +1,17 @@
 :root {
   --base-font-size: 16;
   --px-to-rem: calc(1rem / var(--base-font-size) * 1);
+  --px-10: calc(10 * var(--px-to-rem));
+  --px-20: calc(20 * var(--px-to-rem));
+  --px-30: calc(30 * var(--px-to-rem));
   --px-40: calc(40 * var(--px-to-rem));
+  --px-50: calc(50 * var(--px-to-rem));
+  --px-60: calc(60 * var(--px-to-rem));
+  --px-70: calc(70 * var(--px-to-rem));
   --px-80: calc(80 * var(--px-to-rem));
-  --px-64: calc(64 * var(--px-to-rem));
+  --px-90: calc(90 * var(--px-to-rem));
+  --px-100: calc(100 * var(--px-to-rem));
+  --grid-gap: 1rem;
 }
 
 html {
@@ -14,12 +22,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   box-sizing: border-box;
   background-color: #000000;
 }
@@ -28,13 +34,15 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
+  color: red;
 }
 
 .logo {
+  margin: 1rem 0;
+  letter-spacing: calc(22 * var(--px-to-rem));
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 
 nav {
@@ -58,10 +66,17 @@ nav a {
   font-size: 1rem;
 }
 
+nav a:hover {
+  text-decoration: underline;
+}
+
 section {
   padding: var(--px-80);
-  margin: var(--px-80) 0;
+  /* margin: var(--px-80) 0; */
+  margin: 0;
   border-top: solid 10px red;
+  background-image: url('/images/BG/BG_dark-gray-brick-LSD.png');
+  background-repeat: repeat;
 }
 
 section:first-child {
@@ -71,21 +86,27 @@ section:first-child {
 section h1 {
   width: 100%;
   text-align: center;
-  font-size: var(--px-64);
+  font-size: var(--px-60);
   color: white;
+}
+
+section h1:first-child {
+  margin-top: 0;
 }
 
 .grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--grid-gap);
 }
 
 .grid__cell {
   display: block;
-  width: calc(33.333% - 1rem);
-  height: calc(33.333% - 1rem);
+  width: calc(33.33333% - 1rem);
+  height: calc(33.33333% - 1rem);
+  padding: 10px;
   border-radius: 0.5rem;
   background-color: #000000;
 }
@@ -95,6 +116,7 @@ section h1 {
 }
 
 .grid__metadata {
+  font-size: 1rem;
   color: #ffffff;
 }
 
@@ -102,11 +124,21 @@ section h1 {
   transition: transform 0.1s ease-out;
   transform-style: preserve-3d;
   perspective: 1000px;
+  box-sizing: border-box;
 }
 
 .bg-dark {
-  background-color: rgb(49, 9, 9);
+  background-color: rgb(24, 4, 4);
   color: rgb(179, 179, 179);
+}
+
+.active a {
+  color: white;
+}
+
+footer {
+  padding: var(--px-40);
+  color: rgb(116, 116, 116);
 }
 
 /* Responsive adjustments */
