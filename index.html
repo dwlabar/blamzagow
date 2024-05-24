@@ -5,84 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BLAMZAGOW / VOID ENTITY</title>
-  <style>
-    /* BASE */
-    :root {
-      font-size: 16px;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
-    nav {
-      margin-bottom: 2rem;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav li {
-      margin: 0 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-size: 1rem;
-    }
-
-    .image-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .image-grid img {
-      width: calc(33.333% - 1rem);
-      height: auto;
-      border-radius: 0.5rem;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .image-grid img {
-        width: calc(50% - 1rem);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .image-grid img {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/_global.css">
 </head>
 
 <body>
@@ -99,14 +22,15 @@
   </header>
   <main>
     <section class="image-grid">
-      <img src="https://via.placeholder.com/300" alt="Image 1">
-      <img src="https://via.placeholder.com/300" alt="Image 2">
-      <img src="https://via.placeholder.com/300" alt="Image 3">
-      <img src="https://via.placeholder.com/300" alt="Image 4">
-      <img src="https://via.placeholder.com/300" alt="Image 5">
-      <img src="https://via.placeholder.com/300" alt="Image 6">
+      <img src="https://via.placeholder.com/300" alt="Image 1" class="lookatme">
+      <img src="https://via.placeholder.com/300" alt="Image 2" class="lookatme">
+      <img src="https://via.placeholder.com/300" alt="Image 3" class="lookatme">
+      <img src="https://via.placeholder.com/300" alt="Image 4" class="lookatme">
+      <img src="https://via.placeholder.com/300" alt="Image 5" class="lookatme">
+      <img src="https://via.placeholder.com/300" alt="Image 6" class="lookatme">
     </section>
   </main>
+  <script src="/js/blamzagow.js"></script>
 </body>
 
 </html>
